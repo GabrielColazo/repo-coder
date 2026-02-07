@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma de la página en español-->
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <!--Código Bootstrap para titulo y carousel de imágenes-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS externo-->   
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- una imagen favicon para la ventana -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+</head>
+
+<body>
+        <header>   <!-- el header contiene el menu de navegacion-->
+                                       
+        <nav class="navegacion">
+            <ul class="navegacion-lista">
+                 <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                 <li>
+                    <a href="./proyectos.html">Proyectos</a>
+                </li>
+                 <li>
+                    <a href="./sobre-mi.html">Sobre Mí</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main> 
+
+     <section class="proyectos">
+
+      <!--utilice bootstrap para crear un carousel que muestra los proyectos del portfolio-->
+      <!-- ACLARACIÓN SOLO UTILICE BOOTSTRAP PARA EL H1 Y EL CAROUSEL-->
+    <div class="titulo text-center">
+        <h1 class="display-5 fw-bold tracking-tight"> <!-- este es igual al h1 del index-->
+        Gabo<span class="text-primary">Web</span> Proyectos
+     </h1>
+
+     <hr class="mx-auto my-4 w-25 border-3 border-primary rounded">
+
+     </div>
+
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="../img/proyecto1.jpg" class="d-block w-100" alt="Proyecto 1">
+        <div class="carousel-caption caption-custom">
+          <h5>PROYECTO 1</h5>
+          <p>GaboWeb</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../img/proyecto2.jpg" class="d-block w-100" alt="Proyecto 2">
+        <div class="carousel-caption caption-custom">
+          <h5>PROYECTO 2</h5>
+          <p>GaboWeb</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../img/proyecto3.jpg" class="d-block w-100" alt="Proyecto 3">
+        <div class="carousel-caption caption-custom">
+          <h5>PROYECTO 3</h5>
+          <p>GaboWeb</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- aca termina el bootstrap del carousel-->
+
+</section>
+
+
+
+      </main>
+      
+
+  
+<!-- FOOTER-->
+<footer class="footer">
+
+  <div class="footer-bandera"> <!-- la bandera argentina dentro del footer-->
+    <img src="../img/banderaarg.svg" alt="Argentina">
+  </div>
+
+  <p class="footer-text"> <!-- este es el texto que se encuentra dentro del footer-->
+    Gabriel Colazo – Diseñador Web | Todos los derechos reservados © 2026
+  </p>
+
+  <div class="footer-social"> <!-- en el footer agrego redes sociales-->
+    <img src="../img/instagram.svg" alt="Instagram">
+    <img src="../img/facebook.svg" alt="Facebook">
+    <img src="../img/whatsapp.svg" alt="WhatsApp">
+  </div>
+
+</footer> <!-- aqui finaliza el footer-->
+
+
+    <!-- Script de Boostrap-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+</body>
+</html>
