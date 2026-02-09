@@ -36,6 +36,14 @@ body {
  
 }
 
+.nav-brand {
+  font-size: 1.25rem;   
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+
 .navegacion-lista { /* este es el contenedor de la lista desordenada "ul"*/
   display: flex; /* el flex logra que tenga un menu horizontal*/
   gap: 2.5rem; /*este el espacio que tengo en cada li*/
@@ -73,6 +81,10 @@ body {
   gap: 2rem; /* este es el espacio entre las filas y las columnas*/
   align-items: center; /*alineo de forma vertical cada elemento dentro de su celda */
   padding-bottom: 2rem; /*separo el section del footer*/
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #FFF59D;
+  padding: 1rem 2rem;
 }
 
 .titulo {
@@ -99,6 +111,7 @@ body {
   height: 250px; /*esta altura la fui probando hasta que quede como me parecia mejor a un banner*/
   object-fit: cover; /*para recortar la imagen proporcionalmente*/
   border-radius: 8px; /* solamente para suavizar los bordes queda muy bueno*/
+
 }
 
 /*contenedor de imagen2, se encuentra en la columna 2 y ocupa la fila desde la 1 a la 2*/
@@ -111,7 +124,9 @@ body {
 .home-imagen2 img {
   max-width: 100%; /*la imagen ocupa todo el ancho del contenedor*/
   height: auto;  /*la altura se calcula automaticamente en función del ancho*/
+ 
 }
+
 
 .home-imagen1,
 .home-imagen2 { /*coloque un borde que me parecio bueno para las dos imagenes, bastante suave*/
@@ -130,6 +145,11 @@ body {
   margin-top: 3rem; /* separación del menú*/
   justify-content:center;
   padding-bottom: 2rem; /*separo el section del footer*/
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #FFF59D;
+  padding: 2rem ;
+  margin-top: 1rem  ;
+  margin-bottom: 3rem ;
 }
 
 
@@ -137,6 +157,12 @@ body {
   width: 200px;
   height: auto;
   border-radius: 12px;
+  transition: transform 0.3s ease;
+
+}
+
+.sobremi-imagen1 img:hover {
+  transform: scale(1.10);
 }
 
 .sobremi-contenido {
@@ -157,6 +183,13 @@ body {
 
 /** PROYECTOS **/
 
+.proyectos{
+border-radius: 10px;
+box-shadow: 0 5px 15px #FFF59D;
+padding:1rem 2rem;
+margin-bottom: 3rem ;
+
+}
 /* Contenedor del carousel */
 #carouselExample {
   max-width: 800px;   
@@ -175,6 +208,10 @@ body {
 
 .form {
   display: grid;
+  background-color: #ffffff1a;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px #FFF59D;
   grid-template-columns: 1fr;
   gap: 1.2rem;
   width: 100%;
@@ -285,6 +322,8 @@ body {
   color: #FFF59D; /*texto claro*/
   font-size: var(--fs-400); /*utilice las variables declaradas al principio*/
   text-align: center; /*para centrar el texto, no el contenedor*/
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #FFF59D;
 }
 
 .footer-bandera img {
