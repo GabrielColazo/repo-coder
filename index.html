@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- titulo de mi página -->
-    <title>GaboWeb</title>
+    <title>GaboWeb</title>  
+    <!--Enlace de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- CSS externo-->   
     <link rel="stylesheet" href="./css/estilos.css">
     <!-- La fuente que elegi de  Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-     <!-- una imagen favicon para la ventana -->
-    <link rel="icon" type="image/png" href="../portfolio2/img/favicon.png">
+   
 </head>
 <body>
-    <header>  <!-- el header contiene el menu de navegacion-->
+  
+<!-- Cartel de rebajas de compra, realizado en Bootstrap-->
+
+<div class="text-center py-3 fs-4 border-bottom border-warning text-white bg-dark position-sticky top-0" 
+     style="z-index:1030; font-family: 'Space Grotesk', sans-serif;">
+  <span class="fw-bold">🔥 ¡Solo por hoy! 🔥</span>
+  <span class="text-warning">30% OFF</span> en cualquier diseño
+</div>
+
+
+<!-- el header contiene el menu de navegacion-->
+
+    <header>  
                                        
         <nav class="navegacion">  <!-- una sola barra de navegación-->    
-          <span class="navegacion-logo">
-             Gabo<span class="logo-web">Web</span>
-          </span>
 
-                               
+          <a href="index.html" class="navegacion-logo"> <!--desde el logo se puede volver al inicio-->
+         Gabo<span class="logo-web">Web</span> <!-- el logo de la pagina es GaboWeb-->
+         </a>
+                                       
            <!--lista desordenada que contiene cada uno de los enlaces de todo el sitio web--> 
            <!-- la lista desordenada contiene index, proyectos, sobre-mi y contacto-->
             <ul class="navegacion-lista">
@@ -39,39 +53,43 @@
                     <a href="./pages/contacto.html">Contacto</a>
                 </li>
             </ul>
-        </nav>
+        </nav> <!--Finaliza la barra de navegación-->
 
-    </header> <!-- aca termina el header junto con su barra de navegación-->
+      </header> <!-- Finaliza el header-->
+
 
     <main> 
 
           <section class="home">
             <div class="titulo">
-              <h1 class="titulo-principal">
+              <h1 class="titulo-principal"> <!--titulo h1 principal, que se encuentra en todas las páginas-->
              Gabo<span>Web</span> Developer
              </h1>
 
-            <h2 class="subtitulo">
+            <h2 class="subtitulo"> <!-- subtitulo h2, que se encuentra en todas las páginas-->
             Diseño y desarrollo web profesional
             </h2>
 
-           <hr class="linea">
+           <hr class="linea"> <!-- linea debajo del titulo, que se encuentra en todas las páginas-->
          </div>
 
            
 
-           <!-- home-imagen1 es la primera imagen debajo del titulo-->
+           <!-- home-imagen1 es la primera imagen del index debajo del titulo-->
 
             <div class="home-imagen1" >
-                <img src="./img/fondo2.jpg" alt="imagen tipo banner">
+                <img src="./img/fondo2.jpg" alt="imagen 1 referente a diseño web">
             </div>
              
-            <!-- home-imagen2 es la imagen que se encuentra a la derecha del titulo-->
-              <div class="home-imagen2">
-            <img src="./img/fondodepantalla.jpg" alt="imagen al lado del titulo">
+            <!-- home-imagen2 es la imagen que se encuentra a la derecha del titulo, tambien de diseño web-->
+          <div class="home-imagen2">
+                <img src="./img/fondodepantalla.jpg" alt="imagen al lado del titulo">
+              <div class="texto-sobre-imagen"> <!-- este es el texto que se encuentra sobre la imagen de la derecha del titulo-->
+               Me especializo en la creación de páginas web modernas, funcionales y personalizadas para profesionales de todos los rubros. En GaboWeb respondo el mismo día de la consulta y trabajo para potenciar tu presencia online, destacar tu marca personal y ofrecer soluciones digitales que hagan crecer tu negocio. Cada proyecto que desarrollo está pensado para reflejar profesionalismo, confiabilidad y originalidad, asegurando que tu página web no solo luzca bien, sino que también cumpla sus objetivos y genere resultados reales.
               </div>
+          </div>
              
-        </section>        
+        </section> <!-- aqui finaliza la sección del home, que es la sección principal del index-->       
 
     </main>    
 
@@ -80,7 +98,7 @@
 <footer class="footer">
 
   <div class="footer-bandera"> <!-- la bandera argentina dentro del footer-->
-    <img src="./img/banderaarg.svg" alt="Argentina">
+    <img src="./img/banderaarg.svg" alt="bandera Argentina">
   </div>
 
   <p class="footer-text"> <!-- este es el texto que se encuentra dentro del footer-->
@@ -88,13 +106,15 @@
   </p>
 
   <div class="footer-social"> <!-- en el footer agrego redes sociales-->
-    <img src="./img/instagram.svg" alt="Instagram">
-    <img src="./img/facebook.svg" alt="Facebook">
-    <img src="./img/whatsapp.svg" alt="WhatsApp">
+    <img src="./img/instagram.svg" alt="icono de Instagram">
+    <img src="./img/facebook.svg" alt="icono de Facebook">
+    <img src="./img/whatsapp.svg" alt="icono de WhatsApp">
   </div>
 
 </footer> <!-- aqui finaliza el footer-->
-
+ 
+<!--enlace de script final, que pertenece al Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

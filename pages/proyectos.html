@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="es"> <!-- Idioma de la página en español-->
-<head>
-    
+<head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- titulo de mi página -->
     <title>Proyectos</title>
-    <!--Código Bootstrap para titulo y carousel de imágenes-->
+   <!--Enlace de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- CSS externo-->   
     <link rel="stylesheet" href="../css/estilos.css">
-    <!-- Google fonts-->
+    <!-- La fuente que elegi de  Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- una imagen favicon para la ventana -->
-    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
 </head>
 
 <body>
-        <header>   <!-- el header contiene el menu de navegacion-->
+
+<!-- Cartel de rebajas de compra, realizado en Bootstrap-->
+
+  <div class="text-center py-3 fs-4 border-bottom border-warning text-white bg-dark position-sticky top-0" 
+     style="z-index:1030; font-family: 'Space Grotesk', sans-serif;">
+  <span class="fw-bold">🔥 ¡Solo por hoy! 🔥</span>
+  <span class="text-warning">30% OFF</span> en cualquier diseño
+</div>
+        <!-- el header contiene el menu de navegacion-->
+        <header>   
                                        
-        <nav class="navegacion">
-          <span class="navegacion-logo">
-             Gabo<span class="logo-web">Web</span>
-          </span>
+        <nav class="navegacion"> <!-- una sola barra de navegación--> 
+
+         <a href="../index.html" class="navegacion-logo"> <!--desde el logo se puede volver al inicio-->
+         Gabo<span class="logo-web">Web</span> <!-- el logo de la pagina es GaboWeb-->
+         </a>
+
+            <!--lista desordenada que contiene cada uno de los enlaces de todo el sitio web--> 
+            <!-- la lista desordenada contiene index, proyectos, sobre-mi y contacto-->
             <ul class="navegacion-lista">
                  <li>
                     <a href="../index.html">Inicio</a>
@@ -38,34 +50,33 @@
                     <a href="./contacto.html">Contacto</a>
                 </li>
             </ul>
-        </nav>
+        </nav> <!--Finaliza la barra de navegación-->
 
-    </header>
+    </header> <!-- Finaliza el header-->
 
     <main> 
 
      <section class="proyectos">
 
-      <!--utilice bootstrap para crear un carousel que muestra los proyectos del portfolio-->
+      <!--utilice bootstrap para crear un carousel que muestra los proyectos de forma ficticio del portfolio-->
       
     <div class="titulo">
-              <h1 class="titulo-principal">
+              <h1 class="titulo-principal"> <!--titulo h1 principal, que se encuentra en todas las páginas-->
              Gabo<span>Web</span> Developer
              </h1>
 
-            <h2 class="subtitulo">
+            <h2 class="subtitulo"> <!-- subtitulo h2, que se encuentra en todas las páginas-->
             Diseño y desarrollo web profesional
             </h2>
 
-           <hr class="linea">
+           <hr class="linea"> <!-- linea debajo del titulo, que se encuentra en todas las páginas-->
     </div>
 
-
+   <!--desde aca comienza bootstrap con su carousel, las imágenes que aparecen son las que elegí-->
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
-
       <div class="carousel-item active">
-        <img src="../img/proyecto1.jpg" class="d-block w-100" alt="Proyecto 1">
+        <img src="../img/proyecto1.jpg" class="d-block w-100" alt="Proyecto 1"> <!-- imagen del proyecto 1, que se encuentra en el carousel-->
         <div class="carousel-caption caption-custom">
           <h5>PROYECTO 1</h5>
           <p>GaboWeb</p>
@@ -73,7 +84,7 @@
       </div>
 
       <div class="carousel-item">
-        <img src="../img/proyecto2.jpg" class="d-block w-100" alt="Proyecto 2">
+        <img src="../img/proyecto2.jpg" class="d-block w-100" alt="Proyecto 2"><!-- imagen del proyecto 2, que se encuentra en el carousel-->
         <div class="carousel-caption caption-custom">
           <h5>PROYECTO 2</h5>
           <p>GaboWeb</p>
@@ -81,7 +92,7 @@
       </div>
 
       <div class="carousel-item">
-        <img src="../img/proyecto3.jpg" class="d-block w-100" alt="Proyecto 3">
+        <img src="../img/proyecto3.jpg" class="d-block w-100" alt="Proyecto 3"><!-- imagen del proyecto 3, que se encuentra en el carousel-->
         <div class="carousel-caption caption-custom">
           <h5>PROYECTO 3</h5>
           <p>GaboWeb</p>
@@ -91,24 +102,21 @@
     </div>
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+      <span class="carousel-control-prev-icon"></span> <!--botón de retroceso dentro del carousel-->
     </button>
 
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
+      <span class="carousel-control-next-icon"></span> <!--botón de avance dentro del carousel-->
     </button>
   </div>
   <!-- aca termina el bootstrap del carousel-->
 
-</section>
-
-
+</section> <!--aca termina sección de proyectos-->
 
       </main>
       
-
-  
-<!-- FOOTER-->
+ 
+<!-- Comienza el footer, que se encuentra en todas las páginas del sitio web-->
 <footer class="footer">
 
   <div class="footer-bandera"> <!-- la bandera argentina dentro del footer-->

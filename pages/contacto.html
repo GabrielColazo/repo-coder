@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es"> <!-- Idioma de la página en español-->
-<head>
-    
+<head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo de mi página -->
     <title>Contacto</title>
-    
+    <!--Enlace de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
     <!-- CSS externo-->   
     <link rel="stylesheet" href="../css/estilos.css">
     <!-- Google fonts-->
@@ -17,14 +18,26 @@
 
 </head>
 <body>
+
+  <!-- Cartel de rebajas de compra, realizado en Bootstrap-->
+  <div class="text-center py-3 fs-4 border-bottom border-warning text-white bg-dark position-sticky top-0" 
+     style="z-index:1030; font-family: 'Space Grotesk', sans-serif;">
+  <span class="fw-bold">🔥 ¡Solo por hoy! 🔥</span>
+  <span class="text-warning">30% OFF</span> en cualquier diseño
+</div>
+
      <header>   <!-- el header contiene el menu de navegacion-->
                                        
-        <nav class="navegacion">
-          <span class="navegacion-logo">
-             Gabo<span class="logo-web">Web</span>
-          </span>
+        <nav class="navegacion"> <!-- una sola barra de navegación--> 
+         
+          <a href="../index.html" class="navegacion-logo"> <!--desde el logo se puede volver al inicio-->
+         Gabo<span class="logo-web">Web</span> <!-- el logo de la pagina es GaboWeb-->
+         </a>
           
-            <ul class="navegacion-lista">
+
+            <!--lista desordenada que contiene cada uno de los enlaces de todo el sitio web--> 
+            <!-- la lista desordenada contiene index, proyectos, sobre-mi y contacto-->
+            <ul class="navegacion-lista"> <!-- una sola barra de navegación--> 
                  <li>
                     <a href="../index.html">Inicio</a>
                 </li>
@@ -45,7 +58,7 @@
             
         <main>
 
-          <section> <!-- un section contiene todo el formulario completo-->
+          <section class="contacto-section"> <!-- un section contiene todo el formulario completo-->
               <div class="titulo">
               <h1 class="titulo-principal">
              Gabo<span>Web</span> Developer
@@ -60,61 +73,57 @@
 
 
             <!--comienza formulario-->
-            <form class="form" action="#" method="post">
+        <form class="form" action="#" method="post">
 
-  <div class="form-field">
-    <label class="form-label" for="nombre">Nombre</label>
-    <input class="form-input" type="text" id="nombre" name="nombre" required>
-  </div>
+              <div class="form-field">
+                   <label class="form-label" for="nombre">Nombre</label>
+                    <input class="form-input" type="text" id="nombre" name="nombre" required>
+               </div>
 
-  <div class="form-field">
-    <label class="form-label" for="email">Email</label>
-    <input class="form-input" type="email" id="email" name="email" required>
-  </div>
+             <div class="form-field">
+                   <label class="form-label" for="email">Email</label>
+                   <input class="form-input" type="email" id="email" name="email" required>
+            </div>
 
-  <div class="form-field">
-    <label class="form-label" for="mensaje">Mensaje</label>
-    <textarea class="form-textarea" id="mensaje" name="mensaje" rows="5"></textarea>
-  </div>
+            <div class="form-field">
+                <label class="form-label" for="mensaje">Mensaje</label>
+                 <textarea class="form-textarea" id="mensaje" name="mensaje" rows="5"></textarea>
+            </div>
 
-  <fieldset class="form-field form-field--group"> <!--titulo a grupo de opciones-->
-    <legend class="form-legend">Motivo de contacto</legend>
+          <fieldset class="form-field form-field--group"> <!--titulo a grupo de opciones-->
+                  <legend class="form-legend">Motivo de contacto</legend>
+                  <label class="form-option">
+                  <input class="form-radio" type="radio" name="motivo">
+                 Consulta
+          </label>
 
-    <label class="form-option">
-      <input class="form-radio" type="radio" name="motivo">
-      Consulta
-    </label>
+         <label class="form-option">
+                <input class="form-radio" type="radio" name="motivo">
+                Proyecto
+        </label>
+     
+          <label class="form-option">
+                <input class="form-radio" type="radio" name="motivo">
+               Otro
+              </label>
+          </fieldset>
 
-    <label class="form-option">
-      <input class="form-radio" type="radio" name="motivo">
-      Proyecto
-    </label>
+        <div class="form-field">
+             <label class="form-option">
+             <input class="form-checkbox" type="checkbox" name="novedades">
+              Quiero recibir novedades
+             </label>
+          </div>
 
-    <label class="form-option">
-      <input class="form-radio" type="radio" name="motivo">
-      Otro
-    </label>
-  </fieldset>
-
-  <div class="form-field">
-    <label class="form-option">
-      <input class="form-checkbox" type="checkbox" name="novedades">
-      Quiero recibir novedades
-    </label>
-  </div>
-
-  <button class="form-button" type="submit">Enviar</button> <!--botón de enviar es el único-->
+            <button class="form-button" type="submit">Enviar</button> <!--botón de enviar es el único-->
 
 </form> <!--fin de formulario-->
 
-
-
-        </section>
-        
+        </section>        
 
        </main>
 
-<!-- FOOTER-->
+<!-- aca comienza el footer-->
     <footer class="footer">
 
   <div class="footer-bandera"> <!-- la bandera argentina dentro del footer-->
@@ -133,7 +142,7 @@
 
 </footer> <!-- aqui finaliza el footer-->
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
 

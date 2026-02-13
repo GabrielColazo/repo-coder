@@ -27,8 +27,9 @@ body {
   
 }
 
-/** NAVEGACIÓN **/
+/** APARATADO DE NAVEGACIÓN DEL SITIO WEB **/
 /*utilice flex para alinear el menu de navegación en el elemento nav*/
+
 .navegacion { 
   display: flex; 
   align-items: center; /*alineo de manera vertical la barra de nav por si llego a colocar un logo*/
@@ -36,19 +37,27 @@ body {
  
 }
 
-.navegacion-logo {
+/*El siguiente logo al hacer click vuelve al index*/
+
+.navegacion-logo { /**características del logo**/
+  text-decoration: none; /*saca el subrayado del logo*/
+  font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
   font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1px; /*espacio entre cada letra del logo*/
+  color: inherit; /*hereda el color del body para que el logo tenga el mismo color que el resto del texto*/
 }
 
 .logo-web {
-  color: #ff7a18;
+  color: #ff7a18; /**El color de la palabra "web" del logo **/
 }
 
+.navegacion-logo:hover { /*cuando paso el mouse sobre el logo se activa esta pseudoclase*/
+  
+  transform: scale(1.1);
+}
 
-
-
+/*NAVEGACIÓN HORIZONTAL DEL MENU INICIO- PROYECTOS- SOBREMI- CONTACTO*/
 .navegacion-lista { /* este es el contenedor de la lista desordenada "ul"*/
   display: flex; /* el flex logra que tenga un menu horizontal*/
   gap: 2.5rem; /*este el espacio que tengo en cada li*/
@@ -59,7 +68,7 @@ body {
 /* Estilos visuales sobre los enlaces */
 .navegacion-lista a {
   text-decoration: none;     /* saca subrayado */
-  color: #f1e7e7;               /* color base */
+  color: #f1e7e7;               /* color de los enlaces */
   transition: color 0.3s;    /* transición suave */
 }
 
@@ -77,17 +86,8 @@ body {
   outline-offset: 2px; /* separa del borde del foco*/
 }
 
-/* Botón hamburguesa oculto en desktop */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
 
-
-
-/** HOME es el section donde se encuentra el h1 y h2 junto a dos imagenes**/
+/* HOME CLASE QUE PERTENECE AL INDEX.HTML*/
 
 .home {
   display: grid; /* decidi usar grip ya que eran 2 columnas y 2 filas*/
@@ -95,54 +95,48 @@ body {
   grid-template-rows: auto auto; /* dos filas en auto la altura se adapta al contenido*/
   gap: 2rem; /* este es el espacio entre las filas y las columnas*/
   align-items: center; /*alineo de forma vertical cada elemento dentro de su celda */
-  padding-bottom: 2rem; /*separo el section del footer*/
-  margin-bottom: 3rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px #FFF59D;
+  padding-bottom: 2rem; /*espacio antes de llegar hacia abajo*/
+  margin-bottom: 3rem; /*espacio entre el section y el footer*/
+  border-radius: 10px; /*redondea el el recuadro del section*/
+  box-shadow: 0 5px 15px #FFF59D; /*sombra del section*/
   padding: 1rem 2rem;
 
 }
 
+/*titulo GaboWeb Developer- Diseño y desarrollo web profesional*/
 .titulo {
   text-align: center;
-  
-    }
-
-
-.titulo-principal {
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
+
+.titulo-principal { /**características del título principal**/
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
+  
+  }
 
 .titulo-principal span {
-  color: #ff7a18; 
+  color: #FF8C00; /*color del span que resalta la palabra "GaboWeb"*/
 }
 
-
 .subtitulo {
-  font-size: 1.25rem;
- 
+  font-family: 'Space Grotesk', sans-serif; /* Fuente principal */    
+  font-size: 1.25rem; 
   color: #FFF59D;
   font-weight: 400;
   font-style: italic;
 }
 
-
-.linea {
-  width: 140px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff7a18, #FFF59D);
-  margin: 1.8rem auto;
-  border-radius: 20px;
+.linea { /*esta clase es para la linea decorativa debajo del titulo*/
+  width: 180px;
+  height: 2px;
+  background: #ff7a18;
+  margin: 2rem auto;
   border: none;
 }
 
 
-/*PÁGINA PRINCIPAL "INDEX"*/
-
-/*contenedor de imagen1, se encuentra en la columna 1 fila 2 es la que parece como un banner estirado*/
+/*contenedor DIV de imagen1, se encuentra en la columna 1 fila 2 es la que parece como un banner estirado*/
 .home-imagen1 { 
   grid-column: 1;
   grid-row: 2;
@@ -150,86 +144,114 @@ body {
 
 .home-imagen1 img {
   width: 100%; /*la imagen ocupa todo el ancho del contenedor*/
-  height: 250px; /*esta altura la fui probando hasta que quede como me parecia mejor a un banner*/
+  height: 250px; /*esta altura la fui probando hasta que quedó como me parecia mejor a un banner*/
   object-fit: cover; /*para recortar la imagen proporcionalmente*/
   border-radius: 8px; /* solamente para suavizar los bordes queda muy bueno*/
   }
 
-/*contenedor de imagen2, se encuentra en la columna 2 y ocupa la fila desde la 1 a la 2*/
+/*contenedor DIV de imagen2, se encuentra en la columna 2 y ocupa la fila desde la 1 a la 2*/
+
 .home-imagen2 {
   grid-column: 2;
-  grid-row: 1 / 3;         /* ocupa ambas filas */
- margin-top: 2rem; /*separo la imagen del menu de navegación*/
+  grid-row: 1 / 3;
+  margin-top: 2rem; 
+  position: relative; /* para que el texto quede sobre la imagen */
 }
 
 .home-imagen2 img {
-  max-width: 100%; /*la imagen ocupa todo el ancho del contenedor*/
-  height: auto;  /*la altura se calcula automaticamente en función del ancho*/
- 
+  display: block; /*convierte la imagen en bloque*/
+  max-width: 100%;  /* No supera el ancho del contenedor */
+  height: auto; /* Mantiene la proporción original */
 }
 
-
 .home-imagen1,
-.home-imagen2 { /*coloque un borde que me parecio bueno para las dos imagenes, bastante suave*/
-  border: 1px solid rgba(255,255,255,0.1);
+.home-imagen2 {
+  border: 1px solid rgba(255,255,255,0.1); /*borde en las imágenes*/
+  border-radius: 10px; /*redondeo los bordes queda mejor*/
+}
+
+/* Texto sobre la imagen */
+.texto-sobre-imagen {
+  position: absolute; /* Permite posicionarlo libremente dentro del contenedor */
+  top: 50%; /* Lo baja al 50% del alto del contenedor */
+  left: 50%;  /* Lo mueve al 50% del ancho del contenedor */
+  transform: translate(-50%, -50%); /* Lo centra perfectamente compensando su propio tamaño */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente para mejorar contraste */
+  color: #FFF59D; /* Color claro para destacar sobre fondo oscuro */
+  padding: 20px;
   border-radius: 10px;
+  text-align: center;
+  width: 80%; 
+  max-width: 700px; 
+   font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 /** PÁGINA SOBRE MI **/
 
 .sobremi {
-  display: flex;
+  display: flex; /*activo flexbox*/
+  flex-direction: column; /* los hijos se apilan verticalmente, uno debajo del otro */
   align-items: center;
-  gap: 3rem;
-  margin-top: 3rem; /* separación del menú*/
-  justify-content:center;
-  padding-bottom: 2rem; /*separo el section del footer*/
-  border-radius: 10px;
-  box-shadow: 0 5px 15px #FFF59D;
-  padding: 2rem ;
-  margin-top: 1rem  ;
-  margin-bottom: 3rem ;
+  gap: 2.5rem; /*espacios entre los hijos*/
+  padding: 2rem; /*espacio interno ya usado varias veces en otros contenedores*/
+  margin: 1rem 0 3rem 0; /*espacio externo*/
+   box-shadow: 0 5px 15px #FFF59D; /*sombra del section*/
+  border-radius: 10px; /*redondeo del section*/ 
+
 }
 
 
-.sobremi-imagen1 img {
-  width: 200px;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+.sobremi-contenedor {
+  display: flex; /*activo flex*/
+  align-items: center;
+  justify-content: center; /*centro el contenido de forma horizontal*/
+  gap: 3rem;
+}
 
+.sobremi-imagen1 img { /*imagen dentro del contenedor*/
+  width: 220px;
+  height: auto; /*mantiene la proporción original de la imagen*/
+  border-radius: 12px; /*redondeo de la imagen*/
+  transition: transform 0.3s ease; /*transición suave para el efecto hover*/
 }
 
 .sobremi-imagen1 img:hover {
-  transform: scale(1.10);
+  transform: scale(1.08); /*al pasar el mouse sobre la imagen se agranda un poco para dar un efecto */
 }
 
-.sobremi-contenido {
-  background-color: rgba(255, 255, 255, 0.05); /*el fondo donde se encuentra el texto*/
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  color: #FFF59D;
-  max-width: 600px;
-  
+.sobremi-contenido { /*este es el contenedor del texto dentro de la sección sobre mi*/
+  background-color: rgba(255, 255, 255, 0.05); /*fondo semitransparente para mejorar la legibilidad*/
+  padding: 1.8rem 2.2rem; /*espacio interno del contenedor del texto*/
+  border-radius: 12px; /*redondeo del contenedor del texto*/
+   font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
+   font-size: 1rem; /* Tamaño de fuente */
+   line-height: 1.6; /* Interlineado para mejorar la legibilidad */
+  color: #FFF59D; /*color del texto*/
+  max-width: 600px; /*ancho máximo para evitar que el texto se extienda demasiado en pantallas grandes*/
+  box-shadow: 0 5px 15px #FFF59D; /*sombra del contenedor del texto*/
 }
 
 .sobremi-parrafo {
-  max-width: 65ch;
-  text-align: center; 
-  
+ 
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.6; /*interlineado para mejorar la legibilidad*/
+   font-size: 1rem; /*tamaño de fuente*/
+  text-align: center;
 }
 
 
-/** PROYECTOS **/
+/* PÁGINA WEB PROYECTOS CONTIENE BOOPSTRAP EN EL CAROUSEL DE IMÁGENES DE PROYECTOS FICTICIOS*/
 
 .proyectos{
-border-radius: 10px;
-box-shadow: 0 5px 15px #FFF59D;
-padding:1rem 2rem;
-margin-bottom: 3rem ;
+border-radius: 10px; /*redondeo del section*/
+box-shadow: 0 5px 15px #FFF59D; /*sombra del section*/
+padding:1rem 2rem; /*espacio interno del section*/
+margin-bottom: 3rem ; /*espacio entre el section y el footer*/
 
 }
-/* Contenedor del carousel */
+/* Contenedor del carousel extraído del Framework Bootstrap*/
 #carouselExample {
   max-width: 800px;   
    margin: 0 auto 4rem;
@@ -242,48 +264,58 @@ margin-bottom: 3rem ;
   border-radius: 8px;
 }
 
+/*PÁGINA DE CONTACTO-FORMULARIOS*/
 
-/*formulario*/
+.contacto-section{ /*este es el section que contiene el formulario de contacto*/
+border-radius: 10px; /*redondeo del section*/
+padding: 1rem;
+box-shadow: 0 5px 15px #FFF59D; /*sombra del section*/
+margin-bottom: 3rem; /*espacio entre el section y el footer*/
+}
 
-.form {
-  display: grid;
-  background-color: #ffffff1a;
-  border-radius: 10px;
+.form { /*este es el contenedor del formulario de contacto*/
+  display: grid; /*activo grid para organizar los campos del formulario de manera ordenada*/
+  background-color: #ffffff1a; /*fondo semitransparente para mejorar la legibilidad del formulario*/
+  border-radius: 10px; /*redondeo del formulario*/
+   font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
+   color: #FFF59D; /*color del texto dentro del formulario*/  
   padding: 2rem;
   box-shadow: 0 5px 15px #FFF59D;
-  grid-template-columns: 1fr;
-  gap: 1.2rem;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr; /* una sola columna para que los campos se apilen verticalmente*/
+  gap: 1.2rem; /*espacio entre cada campo del formulario*/
+  width: 100%; /* el formulario ocupa todo el ancho del contenedor */
+  max-width: 500px; /* ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
+  margin: 0 auto; /* centra el formulario horizontalmente */
+  margin-bottom: 3rem; /*espacio entre el formulario y el footer*/
 }
 
 /*elementos del formulario*/
 
 .form-field { /*campo nombre, email, mensaje*/
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  display: flex; /*activo flex para organizar el label y el input de cada campo*/
+  flex-direction: column; /*coloco el label arriba del input*/
+  gap: 0.4rem; /*espacio entre el label y el input*/
 }
 
 /* Grupo de radios */
-.form-field--group {
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
+.form-field--group { /*este es el contenedor de las opciones de radio o checkbox*/
+  border: 1px solid #ccc; /*borde para diferenciar el grupo de opciones*/
+  border-radius: 0.5rem; /*redondeo del grupo de opciones*/
+   font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
+   color: #FFF59D; /*color del texto dentro del grupo de opciones*/
   padding: 1rem;
-  gap: 0.6rem;
+  gap: 0.6rem; /*espacio entre cada opción dentro del grupo*/
 }
 
 /* Labels y legend */
-.form-label,
+.form-label, /*label de cada campo*/
 .form-legend {
   font-weight: 500;
   color: #FFF59D;
 }
 
 /* Inputs y textarea */
-.form-input,
+.form-input, /*input de texto y email*/
 .form-textarea {
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -291,19 +323,20 @@ margin-bottom: 3rem ;
   border-radius: 0.5rem;
   width: 100%;
   box-sizing: border-box;
-  font-family: inherit;
+  font-family: inherit; /*hereda la fuente del formulario*/
+   color: #111; /*color del texto dentro de los inputs*/
 }
 
-/* Focus accesible */
-.form-input:focus-visible,
+/* Seudoclase Focus accesible */
+.form-input:focus-visible, /*cuando el usuario hace click o navega con el teclado sobre los inputs o textarea se activa esta pseudoclase*/
 .form-textarea:focus-visible {
-  outline: none;
+  outline: none; /* elimino el borde de enfoque predeterminado */
   border-color: #FF8C00;
   box-shadow: 0 0 0 3px #FF8C00;
 }
 
 /* Opciones (radio / checkbox) */
-.form-option {
+.form-option { /*este es el contenedor de cada opción de radio o checkbox*/
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -311,7 +344,7 @@ margin-bottom: 3rem ;
 }
 
 /* Inputs específicos */
-.form-radio,
+.form-radio, /*input tipo radio*/
 .form-checkbox {
   width: auto;
   cursor: pointer;
@@ -319,23 +352,24 @@ margin-bottom: 3rem ;
 
 /*formulario botón*/
 
-.form-button {
+.form-button { /*este es el botón de enviar del formulario de contacto*/
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 0.5rem;
   border: none;
-  background-color: #f1bb55;
-  color: #111;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #f1bb55; /*color del botón*/
+   font-family: 'Space Grotesk', sans-serif; /* Fuente principal */
+  color: #111; /*color del texto dentro del botón*/
+  cursor: pointer; /*cambia el cursor a una mano para indicar que es clickeable*/
+  transition: background-color 0.3s ease, transform 0.2s ease; /*transición suave para el cambio de color y el efecto de clic*/
 }
 
-.form-button:hover {
+.form-button:hover { /*cuando paso el mouse sobre el botón se activa esta pseudoclase*/
   background-color: #e0a340;
 }
 
-.form-button:active {
+.form-button:active { /*cuando hago click en el botón se activa esta pseudoclase*/
   background-color: #f1bb55;
   transform: scale(0.95);
   
@@ -343,45 +377,43 @@ margin-bottom: 3rem ;
 
 
 /* Campos requeridos */
-.form-input:required,
+.form-input:required, /*input y textarea requerido*/
 .form-textarea:required {
   border-left: 4px solid #FF8C00;
 }
 
-
-
-/** FOOTER **/
+/** FOOTER SE ENCUENTRA EN TODAS LAS PÁGINAS **/
 .footer {
-  display: flex;
+  display: flex; /*activo flex para organizar el contenido del footer de manera horizontal*/
   justify-content: center; /*centro los elementos */
   align-items: center; /*centro verticalmente, lo dejo porque hay imágenes dentro del footer (Redes sociales)*/
   gap: 2rem; /* espacio entre los items*/
   padding: 2.5rem 1.5rem; /* primer item espacio vertical segundo horizontal*/
   background-color: #111; /*fondo negro un poco más claro que el de fondo de toda la web*/
   color: #FFF59D; /*texto claro*/
+  font-family: 'Space Grotesk', sans-serif;
   font-size: var(--fs-400); /*utilice las variables declaradas al principio*/
   text-align: center; /*para centrar el texto, no el contenedor*/
-  border-radius: 10px;
-  box-shadow: 0 5px 15px #FFF59D;
+  border-radius: 10px; /* border redondeados*/
+  box-shadow: 0 5px 15px #FFF59D; 
 }
 
-.footer-bandera img {
-  display:block; /* para evitar espacios*/
+.footer-bandera img { /*bandera argentina dentro del footer*/
+  display:block; /*convierte la imagen en un bloque*/
   width: 50px;
-  opacity: 0.85 /*un poco de opacidad a la bandera*/
-  
-}
+  opacity: 0.85; /*un poco de opacidad a la bandera*/
+  }
 
 .footer-social {
   display: flex; /* flex para los iconos de las redes sociales de forma horizontal*/
-  gap: 1.5rem;
+  gap: 1.5rem; /* espacio entre los iconos */
 }
 
 .footer-social img {
   width: 24px; /*tamaño de ancho de los iconos redes sociales*/
-  height: 24px; /* tamaño de alto de los iconos redes sociales*/
-  filter: invert(90%);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  height: auto; /* tamaño de alto de los iconos redes sociales*/
+  filter: invert(90%); /*invierte los colores de los iconos*/
+  transition: transform 0.2s ease, opacity 0.2s ease; /*transición suave para el efecto hover*/
 }
 
 .footer-social img:hover { /* cuando se pasa el mouse sobre los iconos de redes sociales*/
@@ -390,13 +422,11 @@ margin-bottom: 3rem ;
 }
 
 
-/** MEDIA QUERIES RESPONSIVE **/
+/* MEDIA QUERIES RESPONSIVE PARA TABLET Y NOTEBOOKS */
 
 
-
-/* Tablet: 768px - 1023px */
-@media (max-width: 1023px) {
-
+/* Tablet: minimo 768px - maximo 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
   
   
 .home {
@@ -409,49 +439,27 @@ margin-bottom: 3rem ;
     gap: 2rem;                   /* espacio entre filas */
   }
 
-  .titulo {
-    grid-area: titulo;
-  }
-
-  .home-imagen1 {
-    grid-area: imagen1;
-  }
-
-  .home-imagen2 {
-    grid-area: imagen2;
-  }
-
-  .home img {
+    .home img {
     width: 90%;
-    max-width: 400px; /* opcional, evita que se estiren */
+    max-width: 400px; /* limita el tamaño máximo de las imágenes para que no se vean demasiado grandes en pantallas medianas */
     height: auto;
     display: block;
     margin: 0 auto;
   }
-
-  #carouselExample {
-    max-width: 90%;
-  }
-
-  #carouselExample img {
-    height: 320px;
-  }
-
-  .carousel-caption h5 {
-    font-size: 1.1rem;
-  }
-
-  .carousel-caption p {
+  
+  .texto-sobre-imagen {
+    padding: 15px;
     font-size: 0.9rem;
+   width: 90%;
   }
+
 }
 
 
 
-/* Móvil: hasta 767px */
+/* Media queries para celulares: máximo 767px */
 
 @media (max-width: 767px) {
-
  
  .navegacion-lista {
     display: flex;         
@@ -492,7 +500,21 @@ margin-bottom: 3rem ;
     display: block;
   }
 
-  .sobremi {
+.texto-sobre-imagen {
+    position: absolute;
+    top: 10%;          /*  un poco más cerca de la parte superior */
+    left: 50%;
+    transform: translateX(-50%); /* solo centrado horizontal */
+    width: 95%;        
+    padding: 15px;    
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-height: 80%;   /* evita que se salga del contenedor */
+    overflow: auto;    /* si el texto es demasiado largo, permite scroll interno */
+  }
+ 
+
+  .sobremi-contenedor {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
